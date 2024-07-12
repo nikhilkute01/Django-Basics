@@ -21,8 +21,10 @@ from mysite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path('',views.index),
     path('about-us',views.aboutUs),
     path('cource',views.cource),
-    path('cource/<int:courceid>',views.course)
+    path('cource/<int:courceid>',views.course),
+   
 
 ]
