@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Value 1</label>
+        <input type="txet" placeholder="" name="name" >
+        <br>
+        <label>Value 2</label>
+        <input type="text" placeholder="" name="sirname">
+        <br>
+
+        <button type="submit">Submit</button>
+        <br>
+        <lable>Output</lable>
+        <input type="text" value={{ouput}}/>
+    </form>
+    
+  </body>
+</html>

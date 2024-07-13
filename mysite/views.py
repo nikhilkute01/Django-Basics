@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 
 
@@ -7,6 +7,9 @@ def aboutUs(request):
 
 def cource(request):
     return HttpResponse("Cource page")
+
+def about(request):
+    return render(request,"app-course.html")
 
 def course(request,courceid):
     return HttpResponse(courceid)
@@ -21,3 +24,13 @@ def index(request):
         ]
     }
     return render(request,"index.html",data)
+
+def userform(request):
+    number=0
+    try:
+        n1=int(request.GET['name'])
+        n2=int(request.GET['sirname'])
+        number=n1+n2
+    except:
+        pass
+    return render(request,'userform.html',{'ouput':number})

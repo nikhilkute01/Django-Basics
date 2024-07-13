@@ -25,6 +25,8 @@ urlpatterns = [
     path('about-us',views.aboutUs),
     path('cource',views.cource),
     path('cource/<int:courceid>',views.course),
+    path('about/',views.about),
+    path('user-form/',views.userform),
    
 
 ]
